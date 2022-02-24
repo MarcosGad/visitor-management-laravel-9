@@ -43,6 +43,13 @@
                             <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         </li>
 
+                
+                        {{-- <li><a href="{{ route('external.trustpilot.reviews') }}">Trustpilot Reviews</a></li>
+                        <li><a href="{{ route('external.facebook.reviews') }}">Facebook Reviews</a></li>
+                        <li><a href="{{ route('external.trustpilot.evaluate') }}">Review us on Trustpilot</a></li>
+                        <li><a href="{{ route('external.facebook.about') }}">About</a></li> --}}
+                         
+
                     </ul>
 
                 </div>
