@@ -40,6 +40,14 @@
                     <ul class="nav flex-column">
 
                         <li class="nav-item">
+                            <a class="nav-link {{ Request::segment(1) == 'dashboard' ? 'active' : '' }}" aria-current="page" href="/dashboard">Dashboard</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('profile') }}">Profile</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         </li>
 
@@ -54,6 +62,11 @@
 
                 </div>
             </nav>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+                @yield('content')
+
+            </main>
         </div>
     </div>    
 
