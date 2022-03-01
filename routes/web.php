@@ -1,8 +1,13 @@
 <?php
 // https://www.webslesson.info/2022/02/visitor-management-system-project-in-laravel.html
+// https://yajrabox.com/docs/laravel-datatables/master/installation
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubUserController;
+Route::get('sub_user', [SubUserController::class, 'index'])->name('sub_user');
+
+Route::get('sub_user/fetchall', [SubUserController::class, 'fetch_all'])->name('sub_user.fetchall');
 
 
 Route::get('/', function () {
@@ -21,6 +26,9 @@ Route::get('logout', [CustomAuthController::class, 'logout'])->name('logout');
 
 Route::get('profile', [ProfileController::class, 'index'])->name('profile');
 Route::post('profile/edit_validation', [ProfileController::class, 'edit_validation'])->name('profile.edit_validation');
+
+Route::get('sub_user', [SubUserController::class, 'index'])->name('sub_user');
+Route::get('sub_user/fetchall', [SubUserController::class, 'fetch_all'])->name('sub_user.fetchall');
 
 Route::get('NewCollection', function () {
 

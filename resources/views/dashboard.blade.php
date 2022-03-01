@@ -47,6 +47,12 @@
                             <a class="nav-link" href="{{ route('profile') }}">Profile</a>
                         </li>
 
+                        @if(Auth::user()->type == 'Admin')
+                            <li class="nav-item">
+                                <a class="nav-link" href="/sub_user">Sub User</a>
+                            </li>
+                        @endif
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         </li>
